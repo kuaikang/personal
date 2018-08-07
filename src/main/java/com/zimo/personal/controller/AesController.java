@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("aes")
 public class AesController {
 
-
     @PostMapping("decode")
     public String decode(@RequestBody AesEntity aesEntity) throws Exception {
         byte[] bytes = AesUtil.base64Decode(aesEntity.getOriginBody());
